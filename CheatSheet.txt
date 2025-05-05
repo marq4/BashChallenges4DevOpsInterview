@@ -28,3 +28,31 @@
 
 * Redirect all output of a function to a file: 
 	+ function_name $arg &> "out.txt" 
+
+* Display text with new lines: 
+	+ echo -e "$var \n" 
+
+* Strip a string from trailing and leading whitespace: 
+	+ echo $var | xargs 
+
+* Check if a string is empty: 
+	+ -z 
+
+* Check if file exists: 
+	+ -f 
+
+* Read lines from a file until a non-empty line is found:
+	+ while read line 
+	    do 
+		line=$(echo $line | xargs) 
+		if [[ -z $line ]]; then
+		then 
+			continue
+		else 
+			echo $line 
+			return 
+		fi 
+	   done < $file 
+
+* Read a file in reverse order: 
+	+ tac $file 
