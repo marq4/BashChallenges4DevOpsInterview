@@ -1,0 +1,4 @@
+Task:
+* Output the natural numbers from 0 to number passed as optional param, 100 default
+  to a file called naturals_up_to_ + number specified + .txt.
+

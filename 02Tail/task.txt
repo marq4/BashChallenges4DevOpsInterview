@@ -1,0 +1,4 @@
+Task:
+* Read N last lines from a file along with their line numbers. 
+* Both file path and N optional. 
+

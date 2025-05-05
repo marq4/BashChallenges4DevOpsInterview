@@ -1,0 +1,30 @@
+* Find all ocurrences of a Word(s) in a folder, ignoring case, nice coloring:
+	+ grep -EiRw --color=auto Systems? /etc/ 					// Global-REgex-Print, Extended Regex patterns, ignore case, Recursive, Match whole word, optional s. 
+
+* Handle 2 optional arguments: 
+	+ first="default value"
+	+ second="default value"
+	+ function main {
+		if [[ $# -ge 1 ]]; then
+			if [[ $# -ge 2 ]]; then
+				second=$2
+			fi
+			first=$1
+		fi
+	}
+	+ main "$@" 
+
+* Read last N lines from file along with their line numbers: 
+	+ tail -10 myfile.txt | nl 
+
+* Check if var num is a valid int: 
+	+ numregex='^[0-9]+$' 							// ^: Beginning, [0-9]: Character class of digits from 0 to 9, +: One or more, $: End. 
+	+ if ! [[ $num =~ $numregex ]] 
+
+* Display the natural numbers from 0 to var target: 
+	+ for num in $(seq 0 "$target"); do
+		echo $num 
+	    done 
+
+* Redirect all output of a function to a file: 
+	+ function_name $arg &> "out.txt" 
