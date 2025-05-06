@@ -1,0 +1,7 @@
+Task:
+* There are many log files that contain IPv4 addresses in HEX format in the third column, we need to edit the log files to add the text "ip-" to these IP addresses. 
+* Example: 
+  0A1021E9 -> ip-0A1021E9. 
+* Example line:
+date time [BADA55C0] ... -> date time [ip-BADA55C0] ...
+

@@ -1,0 +1,4 @@
+Task:
+* Display the first and last lines of a file only if they're different from each other, along with their corresponding line numbers. 
+* Ignore empty lines when comparing, but line numers should correspond to the original line numbers in the file. 
+

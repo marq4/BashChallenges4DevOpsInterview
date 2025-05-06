@@ -1,0 +1,10 @@
+* Extract HEX IPs:
+grep                        Global REgex Print.
+-Eow                        Options: Extended-regex, display Only match, match words.
+\([0-9A-Fa-f]{8}\)          Match exactly 8 ocurrences of HEX digits. 
+
+
+* Extract decimal IPs:
+\([0-9]{1\,3}[.][0-9]{1\,3}[.][0-9]{1\,3}[.][0-9]{1\,3}\)
+                            Match 1, 2, or 3 decimal digits; 4 times. 
+

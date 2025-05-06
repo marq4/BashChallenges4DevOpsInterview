@@ -1,0 +1,12 @@
+# Add "ip-" text to HEX IPs: 
+sed                    Stream Editor.
+-Ei                    Options: Extended-Regex, In-place. 
+'                      Begin command.
+s                      Mode: substitute (replace).
+^                      Beginning of line.
+([^ ]+[ ]+)            (Capture this): One or more non-spaces followed by spaces.
+\[([^ ]+)\]            Match '[', stuff, ']'. 
+\1\2[ip-\3]            First captured group, second, [ip-Third caputred group]. 
+'                                        End command. 
+logfile.txt            Input/output file. 
+

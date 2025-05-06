@@ -56,3 +56,20 @@
 
 * Read a file in reverse order: 
 	+ tac $file 
+
+* Print line number $line from $file: 
+	+ sed --silent "${line}p" $file 
+
+* TR:
+	+ Remove all []: 			tr -d '[]' 
+
+* SED: 
+	+ Beginning of line: 		^ 
+	+ Capture group: 			() 	\1 \2 ...
+	+ Match word: 			[^ ]+ 
+	+ Match space(s): 			[ ]+ 
+	+ Match '[' ']' 			\[\]
+	+ Add text to captured word: 		\1\2#mytext#\3 
+
+
+

@@ -1,0 +1,8 @@
+Task:
+* There are many log files containing IPv4 addresses in different formats. Extract them all!
+* Examples: 
+  + 0A1021E9 
+  + ip-0A1021E9 
+  + 10.16.33.233 
+* Place the IPs (with no "ip-") on a file called extracted_ips.txt. 
+

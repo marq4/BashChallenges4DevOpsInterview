@@ -1,0 +1,13 @@
+2025-04-30 08:23:17 [ip-C0A8010A] [company] [INFO Process 'backup.sh' started on server01 with IP: 154.172.177.140 
+2025-04-30 08:45:22 [ip-AC100102] [company] [WARN Process 'data_sync' is using high memory on server02
+2025-04-30 09:03:48 [ip-7F000001] [company] [INFO Process 'nginx' restarted successfully on server-web
+2025-04-30 09:17:55 [ip-C0A801FE] [company] [ERR Process 'mysql' failed to start on server-db
+2025-04-30 09:45:13 [0A00020F] [company] [INFO Process 'cronjob:cleanup' completed on server-cron
+2025-04-30 10:02:44 [C0A80210] [company] [WARN Process 'monitoring-agent' timed out on server-mon with IP: ip-AC1AA102
+2025-04-30 10:19:08 [0A0101A0] [company] [INFO Process 'logrotate' executed on server-log with IP: C0A80100
+2025-04-30 10:41:33 [ip-C0A80321] [company] [ERR Process 'redis-server' crashed on server-cache
+2025-04-30 11:05:29 [ip-C0A8010C] [company] [INFO Process 'security-scan' initiated on server-sec
+2025-04-30 11:23:11 [ip-8F0A01F0] [company] [WARN Process 'java-app' is unresponsive on server-app
+2025-04-30 11:47:55 [157.6.65.83] [company] [ERR Process 'docker-container' failed health check on server-dock
+2025-04-30 12:12:02 [ip-0A0A0A0A] [company] [INFO Process 'etl-job' completed with warnings on server-etl
+2025-04-30 12:31:44 [ip-BADA55C0] [company] [INFO Process 'api-gateway' is up and running on server-api with IP: 153.0.65.132 
