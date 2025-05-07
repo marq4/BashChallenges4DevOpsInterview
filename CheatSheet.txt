@@ -60,6 +60,9 @@
 * Print line number $line from $file: 
 	+ sed --silent "${line}p" $file 
 
+* Create a log file with 85 SUC lines: 
+	+ for line in {0..84}; do echo SUC; done > suc.log 
+
 * TR:
 	+ Remove all []: 			tr -d '[]' 
 
@@ -71,5 +74,25 @@
 	+ Match '[' ']' 			\[\]
 	+ Add text to captured word: 		\1\2#mytext#\3 
 
+* FIND (-EXEC): 
+	+ Find filaname.txt among current subdirs: 		find . -name "filename.txt" 
+	+ Find file containing text: 				find . -name "*.txt" -exec grep -li "my text" {} +						// Find here, any text file that contains "my text" ignore case, placeholder, placeholder for the results of find, terminate command: concat result and run executed command only once. 
+	+ Find FILENAME.txt case insensitive: 			find . -iname "FILANAME.txt" 
+	+ Find files with size greater than 1GB: 			sudo find / -size +1G 
+	+ Remove execute and write perms for others 
+		in all text files under here: 			sudo find . -type f -name "*.txt" -exec echo chmod o-wx {} \;					// echo is for dry run. Escaped ; is to execute command once for each file found. 
+	+ Display lines containing 
+		the word System(s), case-insensitive: 		sudo find / -type f -exec grep -EInHiw Systems? {} \; 2>/dev/null | less				// I: Ignore binary files, n: display line number, H: path, System or systems. 
+	+ Get owner of files containing text: 			find . -type f -exec grep -EiHIl Systems? {} \; -exec ls -l {} \; | cut -d' ' -f3 
+	+ Change owner & group of files containing text: 		sudo find . -type f -exec grep -EiIHl Systems? {} \; -exec chown root {} \; -exec chgrp root {} \; 	
+	+ Find all .log files that can also be named .log.0, 
+		.log.1, ..., and may be hidden: 			find . -type f -regex '.?*log.?[0-9]+?' 
+		- Now see owner, group, path: 		find . -type f -regex '.?*log.?[0-9]+?' -exec ls -l {} \; | cut -d' ' -f3,4,10 
+		- Now see size: 				find . -type f -regex '.?*log.?[0-9]+?' -exec ls -lh {} \; | cut -d' ' -f5,10 
+		- Now remove all really long logs, prompt: 	find . -type f -regex '.?*log.?[0-9]+?' -size +500M -ok rm {} \;	
+		- Now see logs only owened by log: 		find . -type f -regex '.?*log.?[0-9]+?' -user root 
+
+* XARGS: 
+	+ 
 
 

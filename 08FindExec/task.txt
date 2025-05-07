@@ -1,0 +1,8 @@
+Task:
+* Find all log files:
+	+ Less than 300B in size. 
+	+ Owned by log user. 
+	+ Named *.log (optionally .log.1, .log.2, ..., optionally hidden).
+	+ That ONLY contain SUC (ignore whitespace). 
+* Delete them, with prompt. 
+
